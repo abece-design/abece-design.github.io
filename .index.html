@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Abece Dizajn - usluge za dizajn i razvoj</title>
+	<style>
+		.body {
+			box-sizing: border-box;
+			background-image: url(assets/from-top-under-construction.jpg);
+			background-size: cover;
+			/*background-color: rgb(28, 55, 175);*/
+  		/*background-blend-mode: multiply;*/
+			padding: 3rem;
+			margin:  0;
+			display: flex;
+			min-height: 100vh;
+			width: 100vw;
+			align-items: flex-end;
+			justify-content: flex-end;
+			font-family: Spline Sans;
+			font-weight: 500;
+		}
+
+		.site-header {
+			display: flex;
+			flex-direction: column;
+			background-color: #fff;
+			padding:  2rem;
+			max-width: 36ch;
+			border-radius: 5px;
+		}
+
+		.site-title {
+			margin-top: 0;
+			font-weight: 500;
+		}
+
+
+		.contact {
+			display: inline-flex;
+			align-items: center;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.contact-headline {
+			font-weight: 500;
+		}
+
+		.buttons {
+			display: flex;
+			flex-wrap: wrap;
+			gap:  1em;
+		}
+
+		.button {
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			align-items: center;
+			border:  1px solid #000;
+			border-radius: 3em;
+			padding:  0.5em 1em;
+			color: #000;
+			text-decoration: none;
+		}
+
+		.button:hover,
+		.button:focus {
+			background-color: #000;
+			color: #fff;
+		}
+
+		.email .icon {
+			height: .75em;
+			margin-right: 1em;
+			fill:  #000;
+		}
+
+		.phone .icon {
+			height: 1em;
+			margin-right: 1em;
+			fill:  #000;
+		}
+
+		.button:hover .icon,
+		.button:focus .icon  {
+			fill: #fff;
+		}
+
+		/* spline-sans-regular - latin-ext_latin */
+		@font-face {
+		  font-family: 'Spline Sans';
+		  font-style: normal;
+		  font-weight: 400;
+		  src: local(''),
+		       url('assets/spline-sans-v8-latin-ext_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		       url('assets/spline-sans-v8-latin-ext_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		}
+	</style>
+
+</head>
+<body class="body">
+	<header class="site-header">
+		<h1 class="site-title">Abece dizajn</h1>
+		<p class="slogan">Vaše stranice su nam prioritet, ove mogu sačekati.</p>
+		<div class="contact">
+			<h2 class="contact-headline">javite se</h2>
+			<div class="buttons">
+				<a href="mailto:elvis.krstulovic@fokusgrupa.net" class="email button" ><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12"><path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v8c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm-.5 2.4V10c0 .3.2.5.5.5h12c.3 0 .5-.2.5-.5V2.4L8 8 1.5 2.4Zm11.8-.9H2.7L8 6l5.3-4.5Z" clip-rule="evenodd"/></svg> Mail</a>
+				<a href="tel:+385981835034" class="phone button" ><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 16"><path fill="#1E1E1E" d="M6 12H4v1.5h2V12Z"/><path fill-rule="evenodd" d="M0 2C0 .9.9 0 2 0h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2Zm2-.5h6c.3 0 .5.2.5.5v12c0 .3-.2.5-.5.5H2a.5.5 0 0 1-.5-.5V2c0-.3.2-.5.5-.5Z" clip-rule="evenodd"/></svg> Mobitel</a></header>
+			</div>
+		</div>
+		<script>
+		window.addEventListener("DOMContentLoaded", (event) => {
+
+		const body = document.querySelector(".body");
+		const card = document.querySelector(".site-header");
+		body.style.transition  = "all 1s ease";
+		card.addEventListener('mouseover', () => {
+			body.style.backgroundBlendMode  = "multiply";
+			body.style.backgroundColor  = "rgba(28, 55, 175, .75)";
+
+		});
+
+		card.addEventListener('mouseleave', () => {
+			body.style.backgroundBlendMode  = "";
+			body.style.backgroundColor  = "";
+		});
+
+	});
+		</script>
+</body>
+</html>
